@@ -1,6 +1,6 @@
 Want pronounceable passwords that aren't real words?  This is for you!
 
-# gpw-js #
+# Pronounceable Passphrase Generation #
 
 It's recently [come to people's attention][xkcd] that long pass*phrases* of
 multiple words are better than short pass*words* that are hard to remember.  As
@@ -17,7 +17,7 @@ The backend is written by [Tom Van Vleck][tvv], based on work by Morrie Gasser.
 In addition to [this Javascript version][gpw-js], he has written made it
 available [in Java][gpw-java], [in C][gpw-c], and [for iOS][gpw-ios].
 
-gpw-js is available under the following license:
+gpw-js (and this frontend to it) is available under the following license:
 
 * Share your source with others freely
 * Let Tom Van Vleck know you're using it
