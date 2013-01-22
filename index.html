@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+   <head>
+      <script type="text/javascript" src="gpw.js"></script>
+      <script type="text/javascript">
+         /**
+          * Generate a passphrase comprised of pronounceable, but nonsense,
+          * words.
+          * @param minLength The minimum length of the passphrase with spaces
+          *        stripped out.
+          * @return A string with single spaces between words.
+          */
+         function generateByLength(minLength) {
+            var minWordLength = 3;
+            var maxWordLength = 8;
+            var words = [];
+            var passwordLength = 0;
+            
+            while (passwordLength < minLength) {
+               // https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math/random
+               var length = Math.floor(Math.random() * (maxWordLength - minWordLength + 1)) + minWordLength;
+               word = GPW.pronounceable(length);
+               passwordLength += word.length;
+               words.push(word);
+            }
+            return words.join(' ');
+         }
+         
+         function generate() {
+            var numPassphrases =
+               parseInt(document.getElementById('numPassphrases').value);
+            var minLength =
+               parseInt(document.getElementById('minLength').value);
+            
+            var passphrases = document.getElementById('passphrases');
+            passphrases.innerHTML = '';
+            for (var i = 0; i < numPassphrases; i++) {
+               passphrases.innerHTML += '<div class="passphrase">'
+                                        + generateByLength(minLength)
+                                        + '</div>';
+            }
+            return false;
+         }
+         
+         window.onload = generate;
+      </script>
+      <style type="text/css">
+         input[type=text] {
+            width: 3em;
+         }
+      </style>
+   </head>
+   <body>
+      <form onsubmit="return generate()" action="#">
+         I want <input id="numPassphrases" type="text" value="10" />
+         passphrases of at least <input id="minLength" type="text" value="20" />
+         characters. <input type="submit" value="Schnell!" />
+      </form>
+      <div id="passphrases"></div>
+   </body>
+</html>
+
