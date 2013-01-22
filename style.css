@@ -1,0 +1,87 @@
+body {
+   background-color: #769436;
+   font-family: sans-serif;
+   color: #FFF;
+}
+
+a {
+   color: #d0e1aa;
+}
+
+form {
+   background-color: #38461a;
+   margin: 0;
+   padding: 20px 0;
+}
+
+h1 {
+   font-weight: 100;
+   color: #b3c68b;
+   text-align: center;
+   position: relative;
+   top: 40px;
+   text-shadow: 0 -2px 2px #546828;
+}
+
+.container {
+   width: 500px;
+   margin: 100px auto;
+   text-align: center;
+   -moz-box-shadow: 0 4px 6px #546926;
+   -webkit-box-shadow: 0 4px 6px #546926;
+   box-shadow: 0 4px 6px #546926;
+   overflow: auto;
+   background-color: #8bad43;
+}
+
+#passphrases {
+   margin: 0;
+   text-align: left;
+   border: 1px dashed rgba(255, 255, 255, 0.29);
+   padding: 20px;
+   border-top-style: none;
+   border-top-width: 0;
+}
+
+.passphrase {
+   padding: 8px;
+   font-size: 1.2em;
+   font-style: italic;
+}
+
+.passphrase:hover {
+   background-color: #5e762b;
+}
+
+#submitbtn {
+   float: right;
+   height: 40px;
+   line-height: 40px;
+   padding: 0 20px;
+   border: none;
+   margin-left: 20px;
+   font-size: 16px;
+   border-radius: 4px;
+   background-color: #dde4cd;
+   -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.28), inset 0 1px 0 #ffffff;
+   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.28), inset 0 1px 0 #ffffff;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.28), inset 0 1px 0 #ffffff;
+   position: relative;
+   top: -8px;
+   right: 8px;
+   cursor: pointer;
+}
+
+#submitbtn:active {
+   line-height: 42px;
+}
+
+#footer {
+   text-align: center;
+   font-size: 0.8em;   
+}
+
+#footer a {
+   margin: 0 10px;
+}
+

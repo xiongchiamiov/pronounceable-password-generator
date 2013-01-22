@@ -45,40 +45,42 @@
          
          window.onload = generate;
       </script>
-      <style type="text/css">
-         body {
-            color: #401F03;
-            background-color: #A3C3CC;
-            text-align: center;
-            padding: 8px;
-         }
-
-         input[type=text] {
-            width: 3em;
-         }
-
-         .passphrase {
-            margin-bottom: 0.3em;
-         }
-
-         #footer {
-            font-size: small;
-            margin-top: 32px;
-         }
-
-         #footer a {
-            margin: 0 8px 0 8px;
-         }
-      </style>
+      <link rel="stylesheet" href="style.css" />
    </head>
    <body>
-      <form onsubmit="return generate()" action="#">
-         I want <input id="numPassphrases" type="text" value="10" />
-         passphrases of at least <input id="minLength" type="text" value="20" />
-         characters. <br/>
-         <input type="submit" value="Schnell!" />
-      </form>
-      <div id="passphrases"></div>
+   
+      <h1>Pronounceable Passphrase Generator</h1>
+   
+      <div class="container">
+         <form onsubmit="return generate()" action="#">
+            
+            I want
+            <select id="numPassphrases">
+               <option value="5">5</option>
+               <option value="10">10</option>
+               <option value="20">20</option>
+               <option value="50">50</option>
+               <option value="100">100</option>
+            </select>
+            of at least
+            <select id="minLength">
+               <option value="5">5</option>
+               <option value="10">10</option>
+               <option value="15">15</option>
+               <option value="20" selected>20</option>
+               <option value="25">25</option>
+            </select>
+            characters.
+            <input type="submit" value="Schnell!" class="submit" id="submitbtn"/>
+         </form>
+         
+         <div id="passphrases">
+            <!-- Phrases end up here -->
+         </div>
+         
+      </div>
+   
+     
       <div id="footer">
          <a href="http://www.multicians.org/thvv/gpw-js.html">
             Original by Tom Van Vleck et al
@@ -88,6 +90,7 @@
             Github Project Page
          </a>
       </div>
+      
    </body>
 </html>
 
